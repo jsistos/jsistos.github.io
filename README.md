@@ -1,4 +1,6 @@
-I am a first-year Ph.D. Student at the University of Georgia. Among my areas of interest are Topology and Differential Geometry. In my free time, I enjoy playing boardgames or going for a bike ride (although I am by no means a cyclist!).
+I am a first-year Ph.D. Student at the University of Georgia. I am interested in Topology and Differential Geometry. As an undergraduate, I did some work on Enumerative Combinatorics (see my articles below!).
+
+In my free time, I enjoy playing boardgames or going for a bike ride (although I am by no means a cyclist). I also enjoy reading about the design of subway/metro systems.
 
 ### Articles
 
