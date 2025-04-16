@@ -5,11 +5,19 @@
     box-sizing: border-box;  /* Includes padding in element dimensions */
   }
   
+/* CSS Variables for Colors */
+:root {
+    --primary-navbar: #fefbf7;  /* Adjust to match your preferred green */
+    --hover-navbar: #088d0d;    /* Lighter green for hover */
+    --text-dark: #333;
+    --text-light: #fff;
+  }
+
   /* Typography */
   body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;  /* Dark gray text */
+    color: var(--text-dark);
     padding: 20px;  /* Spacing around content */
   }
   
@@ -19,16 +27,38 @@
     margin-bottom: 2rem;
   }
   
-  .navbar {
+   /* Navigation Bar */
+   .navbar {
     display: flex;
-    justify-content: center;  /* Centers links horizontally */
-    gap: 10px;  /* Adds space between links */
-    margin-bottom: 1rem;
+    justify-content: space-between;  /* Left and right groups */
+    align-items: center;
+    padding: 4px 4px;
+    background-color: var(--primary-navbar);
+    border-radius: 8px;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    gap: 1rem;  /* Space between links */
   }
   
   .nav-link {
+    color: var(--text-dark);
     text-decoration: none;
-    color: #0066cc;  /* Blue links */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: var(--text-light);
+    background-color: var(--hover-navbar);
+  }
+  
+  .nav-link.active {  /* Current page/language */
+    color: var(--text-light);
+    background-color: var(--hover-navbar);
+    font-weight: bold;
   }
   
   /* Button styling */
@@ -41,20 +71,83 @@
     border-radius: 4px;
     margin-top: 10px;
   }
+
+  /* Responsive adjustments for larger screens */
+  @media (max-width: 800px) {
+    body { 
+      margin: 0 auto;  /* Centers content */
+      padding: 40px;
+    }
+
+    .container {
+        flex-direction: column;  /* Stack columns on mobile */
+      }
+    .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    }
+  }
+  
+  /* Two-Column Layout */
+  .container {
+    display: flex;
+    min-height: 80vh;  /* Fill most of the screen */
+  }
+  
+  .left-column {
+    flex: 1;  /* Takes 1 part of space */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .right-column {
+    flex: 2;  /* Takes 2 parts of space (2:1 ratio) */
+    padding: 2rem;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;  /* Circular image */
+    object-fit: cover;   /* Ensures image fills the circle */
+  }
+  
+  .github-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+  }
   
   /* Footer */
   .footer {
     text-align: center;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #666;
+    padding: 1rem;
+    background-color: var(--primary-navbar);
+    color: var(--text-dark);
   }
-  
-  /* Responsive adjustments for larger screens */
-  @media (min-width: 768px) {
-    body {
-      max-width: 800px;
-      margin: 0 auto;  /* Centers content */
-      padding: 40px;
-    }
-  }
+
+  /* Publications List Styling */
+.publications-list {
+  margin: 1rem 0;
+  padding-left: 2rem;  /* Space for numbers */
+  list-style-type: decimal;  /* Ensures numbers are shown */
+}
+
+.publications-list li {
+  margin-bottom: 0.5rem;
+}
+
+.publications-list a {
+  color: var(--text-dark);  /* Uses your green color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.publications-list a:hover {
+  color: var(--hover-navbar);  /* Lighter green on hover */
+  text-decoration: underline;
+}

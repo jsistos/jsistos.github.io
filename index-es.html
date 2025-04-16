@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">  <!-- Sets language for SEO/accessibility -->
+<html lang="es">
 <head>
-  <meta charset="UTF-8">  <!-- Ensures correct text encoding -->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Mobile responsiveness -->
   <title>Jesús Sistos Barrón</title>
   <link rel="stylesheet" href="styles/styles.css">  <!-- Updated path -->
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <!-- Language switcher (simple links for now) -->
-      <a href="index.html" class="nav-link">EN</a> 
-      <span>|</span>
-      <a href="index-es.html" class="nav-link">ES</a>
-    </nav>
-    <h1>Jesús Sistos Barrón</h1>
-    <p class="subtitle">Estudiante de Doctorado en Matemáticas</p>
-  </header>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link active">Inicio</a>  <!-- 'active' class for current page -->
+      <a href="cv.html" class="nav-link">CV</a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link lang-link">en</a>  <!-- 'active' for current language -->
+      <a href="index-es.html" class="nav-link lang-link active">es</a>
+    </div>
+  </nav>
 
-  <main class="main-content">
-    <section id="about">
-      <h2>Acerca de</h2>
-      <p>¡Hola! Soy un estudiante de doctorado en matemáticas en la Universidad de Georgia (UGA). Actualmente, estoy interesado en la topología y la geometría diferencial.
+  <div class="container">
+    <div class="left-column">
+      <img src="assets/profile_pic.jpg" alt="Your Name" class="profile-pic">
+      <a href="https://github.com/jsistosb" class="github-link">GitHub</a>
+    </div>
+
+    <div class="right-column">
+      <h1>Jesús Sistos Barrón</h1>
+      <p class="about-text">¡Hola! Soy un estudiante de doctorado en matemáticas en la Universidad de Georgia (UGA). Actualmente, estoy interesado en la topología y la geometría diferencial.
         
         No obstante, mi trabajo durante la licenciatura giró alrededor de la combinatoria. Mis primeros artículos están listados más adelante.
 
         En mi tiempo libre, me gusta jugar juegos de mesa, o salir a pasear en mi bicicleta (aunque no me considero un ciclista). También me interesa leer sobre el diseño de sistemas de metro y transporte público.</p>
-      <a href="cv.html" class="button">View CV</a>  <!-- Button styling in CSS -->
-    </section>
-  </main>
+
+      <h2>Artículos Recientes</h2>
+      <ol class="publications-list">
+        <li>
+          Complexity of powers of a constant-recursive sequence (con Eric Rowland). En preparación.
+          <a href="https://arxiv.org/abs/2501.14643" target="_blank" rel="noopener noreferrer">(Preprint)</a>
+        </li>
+        <li>
+          Conjugating cyclic n-color compositions (con Brian Hopkins y Hua Wang). Utilitas Mathematica (2025).
+          <a href="https://combinatorialpress.com/article/um/volume%20122/conjugating-cyclic-n-color-compositions.pdf" target="_blank" rel="noopener noreferrer">(Article)</a>
+        </li>
+        <li>
+          Balanced n-color compositions (con Hua Wang). Integers 24A (2024).
+          <a href="https://math.colgate.edu/~integers/a2Proc23/a2Proc23.pdf" target="_blank" rel="noopener noreferrer">(Article)</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+
 
   <footer class="footer">
-    <p>Contact: jsistosb arroba uga punto com</p>
+    <p>Contacto: jsistosb arroba uga punto com</p>
   </footer>
 
   <!-- JavaScript will go here later -->
-  <script src="scripts/language.js"></script>  <!-- Updated path -->
+  <script src="scripts/language.js"></script>
 </body>
 </html>
