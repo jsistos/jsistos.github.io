@@ -1,0 +1,60 @@
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Includes padding in element dimensions */
+  }
+  
+  /* Typography */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;  /* Dark gray text */
+    padding: 20px;  /* Spacing around content */
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;  /* Centers links horizontally */
+    gap: 10px;  /* Adds space between links */
+    margin-bottom: 1rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #0066cc;  /* Blue links */
+  }
+  
+  /* Button styling */
+  .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Responsive adjustments for larger screens */
+  @media (min-width: 768px) {
+    body {
+      max-width: 800px;
+      margin: 0 auto;  /* Centers content */
+      padding: 40px;
+    }
+  }
